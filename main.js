@@ -224,3 +224,17 @@ console.log(result3)
 const str = "name";
 const modStr = str[0].toUpperCase() + str.slice(1);
 console.log(modStr);
+
+
+/*--------Write a function named operate that takes two numbers and a callback function as arguments. The callback function should perform an operation on the two numbers. The function should return the result of the callback.----------*/
+function operate(num1, num2, callback) {
+    let result = callback(num1, num2)
+    return result
+}
+
+function task(para1, para2) {
+    let sum = para1 + para2
+    return sum
+}
+
+console.warn(operate(2, 3, task))
